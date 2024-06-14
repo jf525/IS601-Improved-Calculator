@@ -8,5 +8,5 @@ class Calculation:
     def create(a, b, operation):
         return  Calculation(a, b, operation)
 
-    def get_calculation_result(self):
+    def do_calculation(self):
         return self.operation(self.a, self.b)

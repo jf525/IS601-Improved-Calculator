@@ -3,21 +3,23 @@ from calculator.operations import add, subtract, multiply, divide
 
 class Calculator:
     @staticmethod
+    def calculate(a, b, operation):
+        '''Create and perform calculation, then return result of calculation'''
+        calculation = Calculation(a, b, operation)
+        return calculation.do_calculation()
+
+    @staticmethod
     def add(a,b):
-        calculation = Calculation(a, b, add)
-        return calculation.get_calculation_result()
+        return Calculator.calculate(a, b, add)
     
     @staticmethod
     def subtract(a,b):
-        calculation = Calculation(a, b, subtract)
-        return calculation.get_calculation_result()
+        return Calculator.calculate(a, b, subtract)
     
     @staticmethod
     def multiply(a,b):
-        calculation = Calculation(a, b, multiply)
-        return calculation.get_calculation_result()
+        return Calculator.calculate(a, b, multiply)
     
     @staticmethod
     def divide(a,b):
-        calculation = Calculation(a, b, divide)
-        return calculation.get_calculation_result()
+        return Calculator.calculate(a, b, divide)
